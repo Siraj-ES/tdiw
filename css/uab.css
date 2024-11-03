@@ -1,1 +1,42 @@
 /* completa */
+h1,h3 {
+    font-style: italic;
+}
+
+h1 {
+    color: darkblue;
+}
+
+header p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fancy {
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+header.fancy{
+    color: magenta;
+}
+
+table, td, th{
+    border: 1px black;
+    border-collapse: collapse;
+
+}
+
+.statistics header h3{
+    color: red;
+}
+
+p.important{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: aqua;
+}
+
+.img{
+    float: left;
+    padding: 0 0 0 10px;
+}
+
