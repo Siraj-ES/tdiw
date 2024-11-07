@@ -25,7 +25,10 @@ section.statistics header h3{
 table, th, td{
     border: 1px solid black;
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 p.important{
     font-weight: bold;
@@ -38,9 +41,84 @@ img{
     padding: 0 0 0 10px;
     text-decoration: none;
 }
+#Capçalera{
+    grid-area: Capçalera;
+}
+
+#Graus{
+    grid-area: Graus;
+}
+
+#Registre{
+    grid-area: Registre;
+}
+
+#Estats{
+    grid-area: Estats;
+    
+}
+
+#peu{
+    grid-area: peu;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "Capçalera Capçalera"
+        "Graus Registre"
+        "Estats Estats"
+        "peu peu";
+
+    background-color: lightgray;
+    column-gap: 5px ;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+#Capçalera, #Graus, #Registre, #Estats, #peu{
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 ul li{ /*perquè les “bullets” quedin alineades amb el text*/
     list-style-position:inside;
 }
 
+@media screen and (max-width:400px) {
+    #contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "Capçalera"
+            "Graus"
+            "Registre"
+            "Estats"
+            "peu"
+        ;
+             
+    }
+    #Capçalera, #Graus, #Registre, #Estats, #peu{
+        background-color: white;
+        padding: 5px;
+        margin: 2px;
+        text-align: left;
+    }
+}
+
+#campus-e{
+    animation-name: anim-campus-e;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+@keyframes anim-campus-e{
+    0% {width: 0px; }
+    100% {width: 100px; transform: rotate(360deg);}
+}
 /* completa */
